@@ -1,5 +1,4 @@
 "use client"
-
 import { motion } from "framer-motion"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -33,7 +32,6 @@ const contactInfo = [
     color: "text-orange-600",
   },
 ]
-
 export default function ContactSection() {
   return (
     <section id="contact" className="py-20 bg-white">
@@ -45,7 +43,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
-        >
+          >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Get In Touch</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to experience paradise? Contact our team to plan your perfect getaway or ask any questions about our

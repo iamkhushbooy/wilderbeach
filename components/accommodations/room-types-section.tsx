@@ -12,7 +12,7 @@ const roomTypes = [
     name: "Ocean View Suite",
 
     period: "per night",
-    image: "/placeholder.svg?height=400&width=600&text=Ocean+View+Suite",
+    image: "/luxuary/room1.jpg",
     description: "Elegant suite with panoramic ocean views and private balcony",
     features: ["Ocean View", "Private Balcony", "King Bed", "Mini Bar", "Work Desk"],
     specs: { guests: 2, bedrooms: 1, bathrooms: 1, size: "650 sq ft" },
@@ -23,7 +23,7 @@ const roomTypes = [
     name: "Beach Villa",
 
     period: "per night",
-    image: "/placeholder.svg?height=400&width=600&text=Beach+Villa",
+   image: "/luxuary/room2.jpg",
     description: "Spacious villa with direct beach access and private pool",
     features: ["Private Pool", "Beach Access", "Full Kitchen", "Garden View", "Outdoor Dining"],
     specs: { guests: 4, bedrooms: 2, bathrooms: 2, size: "1200 sq ft" },
@@ -34,7 +34,7 @@ const roomTypes = [
     name: "Presidential Suite",
 
     period: "per night",
-    image: "/placeholder.svg?height=400&width=600&text=Presidential+Suite",
+    image: "/luxuary/room3.jpg",
     description: "Ultimate luxury with panoramic views and butler service",
     features: ["Panoramic View", "Butler Service", "Jacuzzi", "Private Dining", "Wine Cellar"],
     specs: { guests: 6, bedrooms: 3, bathrooms: 3, size: "2000 sq ft" },
@@ -45,7 +45,7 @@ const roomTypes = [
     name: "Garden Pavilion",
 
     period: "per night",
-    image: "/placeholder.svg?height=400&width=600&text=Garden+Pavilion",
+    image: "/luxuary/room1.jpg",
     description: "Tranquil retreat surrounded by tropical gardens",
     features: ["Garden View", "Private Terrace", "Outdoor Shower", "Meditation Space"],
     specs: { guests: 2, bedrooms: 1, bathrooms: 1, size: "800 sq ft" },
@@ -56,7 +56,7 @@ const roomTypes = [
     name: "Overwater Bungalow",
 
     period: "per night",
-    image: "/placeholder.svg?height=400&width=600&text=Overwater+Bungalow",
+    image: "/luxuary/room2.jpg",
     description: "Iconic overwater experience with glass floor panels",
     features: ["Glass Floor", "Direct Ocean Access", "Sunset Deck", "Snorkeling Gear"],
     specs: { guests: 2, bedrooms: 1, bathrooms: 1, size: "900 sq ft" },
@@ -67,7 +67,7 @@ const roomTypes = [
     name: "Family Resort Suite",
 
     period: "per night",
-    image: "/placeholder.svg?height=400&width=600&text=Family+Suite",
+    image: "/luxuary/room3.jpg",
     description: "Perfect for families with connecting rooms and kid-friendly amenities",
     features: ["Connecting Rooms", "Kids Play Area", "Kitchenette", "Family Balcony"],
     specs: { guests: 6, bedrooms: 2, bathrooms: 2, size: "1400 sq ft" },

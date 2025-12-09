@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Sparkles, Home, Info, Hotel, Waves, Images, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
+import Image from "next/image"
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -68,22 +68,28 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-white shadow-lg" : "bg-black/50"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-white shadow-lg" : "bg-black/50"
+        }`}
     >
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo - Left Side */}
           <motion.div whileHover={{ scale: 1.05 }}>
+
             <Link href="/" className="flex items-center space-x-3">
-              <span
-                className={`text-2xl lg:text-3xl font-bold bg-clip-text text-transparent transition-colors duration-300 ${
-                  scrolled || !isHomePage ? "bg-gradient-to-r from-ocean-500 to-tropical-500" : "bg-gradient-to-r from-white to-paradise-200"
-                }`}
+              <div className="relative w-20 h-20"> 
+                <Image
+                  src="/waterparklogo.png"  
+                  alt="WilderBeach Logo"
+                  fill 
+                  className="object-contain"
+                />
+              </div>
+              {/* <span
+                className={`text-2xl lg:text-3xl font-bold bg-clip-text text-transparent transition-colors duration-300 ${scrolled || !isHomePage ? "bg-gradient-to-r from-ocean-500 to-tropical-500" : "bg-gradient-to-r from-white to-paradise-200"
+                  }`}
               >
                 WilderBeach
-              </span>
+              </span> */}
             </Link>
           </motion.div>
 
@@ -98,31 +104,28 @@ export default function Navigation() {
               >
                 <Link
                   href={item.href}
-                  className={`text-xl font-medium transition-all duration-300 relative group ${
-                    pathname === item.href
+                  className={`text-xl font-medium transition-all duration-300 relative group ${pathname === item.href
                       ? scrolled || !isHomePage
                         ? "text-ocean-600"
                         : "text-paradise-300"
                       : scrolled
                         ? "text-gray-900 hover:text-ocean-600"
                         : "text-white/90 hover:text-white"
-                  }`}
+                    }`}
                 >
                   {item.name}
                   {pathname === item.href && (
                     <motion.div
                       layoutId="activeNav"
-                      className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full ${
-                        scrolled || !isHomePage
+                      className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full ${scrolled || !isHomePage
                           ? "bg-gradient-to-r from-ocean-500 to-tropical-500"
                           : "bg-gradient-to-r from-paradise-400 to-coral-400"
-                      }`}
+                        }`}
                     />
                   )}
                   <span
-                    className={`absolute bottom-0 left-0 h-0.5 rounded-full w-0 bg-gradient-to-r from-current to-current transition-all duration-300 group-hover:w-full ${
-                      pathname === item.href ? "opacity-0" : ""
-                    }`}
+                    className={`absolute bottom-0 left-0 h-0.5 rounded-full w-0 bg-gradient-to-r from-current to-current transition-all duration-300 group-hover:w-full ${pathname === item.href ? "opacity-0" : ""
+                      }`}
                   />
                 </Link>
               </motion.div>
@@ -202,11 +205,10 @@ export default function Navigation() {
                     <motion.div key={item.name} variants={itemVariants}>
                       <Link
                         href={item.href}
-                        className={`flex items-center space-x-4 py-3 px-4 rounded-lg transition-colors duration-200 ${
-                          pathname === item.href
+                        className={`flex items-center space-x-4 py-3 px-4 rounded-lg transition-colors duration-200 ${pathname === item.href
                             ? "bg-ocean-50 text-ocean-600 font-bold"
                             : "text-gray-700 hover:text-ocean-600 hover:bg-gray-100"
-                        }`}
+                          }`}
                         onClick={() => setIsOpen(false)}
                       >
                         <item.icon className="h-6 w-6" />

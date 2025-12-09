@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
-
+import Image from "next/image";
 // Structured data for easy management
 const footerLinks = {
   resort: [
@@ -46,12 +46,17 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center sm:items-start lg:col-span-1"
           >
-            <Link href="/" className="flex items-center space-x-2 mb-4 sm:mb-6">
-              <span className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-ocean-500 to-tropical-500">
-                WilderBeach
-              </span>
+            <Link href="/" className="flex items-center space-x-2 ">
+              <div className="relative w-20 h-20">
+                <Image
+                  src="/waterparklogo.png"
+                  alt="WilderBeach Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </Link>
-            <p className="text-ocean-300 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 max-w-xs text-center sm:text-left">
+            <p className="text-ocean-300 text-sm sm:text-base leading-relaxed sm:mb-2 max-w-xs text-center sm:text-left">
               Experience luxury and tranquility at our pristine beachfront resort. Where every moment becomes a cherished memory.
             </p>
             <div className="flex space-x-3 sm:space-x-4">
